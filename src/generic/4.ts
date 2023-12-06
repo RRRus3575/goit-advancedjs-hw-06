@@ -3,13 +3,18 @@
 */
 
 interface Props {
-  title: string;
+  props: {
+    title?: string;
+  };
 }
-class Component {
-  constructor(public props: Props) {}
+class Component implements Props {
+  constructor(public props: object) {}
 }
 
 class Page extends Component {
+  constructor(props: object) {
+    super(props);
+  }
   pageInfo(): void {
     console.log(this.props.title);
   }
