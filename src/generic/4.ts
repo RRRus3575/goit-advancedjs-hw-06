@@ -3,21 +3,20 @@
 */
 
 interface Props {
-  props: {
-    title?: string;
-  };
+  title: string;
 }
 class Component implements Props {
-  constructor(public props: object) {}
+  public title: string;
+  constructor(props: Props) {}
 }
 
 class Page extends Component {
-  constructor(props: object) {
+  constructor(props: Props) {
     super(props);
   }
   pageInfo(): void {
-    console.log(this.props.title);
+    console.log(this.title);
   }
 }
 
-// export {};
+export {};
