@@ -6,6 +6,10 @@ type Page = {
   likes: number;
   accounts: [];
   status: "open" | "close";
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
 };
 const page1 = {
   title: "The awesome page",
