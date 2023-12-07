@@ -2,7 +2,7 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 type Page = {
-  type: string;
+  title: string;
   likes: number;
   accounts: [];
   status: "open" | "close";
